@@ -1,0 +1,107 @@
+$break-small: 360px;
+$break-large: 361px;
+
+body {
+  background-color: #f4edb7;
+  font-family: 'Josefin Slab', serif;
+}
+
+
+@media screen and (max-width: $break-small) {
+
+  #header {
+    font-size: 3em;
+    overflow: hidden;
+
+    #brannon {
+
+      &.big {
+        font-size: 16vw;
+      }
+
+      &.big-add .last {
+        margin-top: 100px;
+      }
+
+      &.big-remove .last {
+        margin-top: 100px;
+      }
+    }
+  }
+
+}
+
+
+
+@media screen and (min-width: $break-large) {
+
+  #header {
+    overflow: hidden;
+
+    #brannon {
+      margin: 0;
+      font-size: 4em;
+
+      text-align: right;
+
+      transition: all .5s;
+
+//      @media screen and (min-width: $break-large) {
+        // do I want this bezier bounce thing?
+        //      transition: font-size .5s cubic-bezier(.41,-0.13,.66,1.18);
+
+        &.big {
+          font-size: 28vw;
+        }
+
+        &.big-add .last {
+          margin-top: 150px;
+        }
+
+        &.big-remove .last {
+          margin-top: 150px;
+        }
+      }
+//    }
+
+    ul {
+      list-style: none;
+      font-size: 2em;
+      padding: 0;
+
+      li {
+        transition: border-bottom-color .2s;
+
+        display: inline-block;
+        margin: 0 10px;
+        border-bottom: 2px solid transparent;
+
+        a {
+          color: #333333;
+          text-decoration: none;
+        }
+
+        @media screen and (max-width: $break-small) {
+          display: block;
+        }
+
+        &.selected, &:hover {
+          border-bottom: 2px solid #333333;
+        }
+      }
+    }
+
+    &.docked ul {
+      float: left;
+      width: 6em;
+
+      margin-top: -3em;
+    }
+
+    &.docked li {
+      float: left;
+      clear: both;
+      width: 5em;
+    }
+  }
+}
