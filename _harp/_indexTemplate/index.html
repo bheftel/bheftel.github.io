@@ -1,39 +1,35 @@
 <html ng-app="Site">
 <head>
     <title>site</title>
-    <!--<base href="/home/brannon/website2.1/pages/bheftel.github.io/dist/">-->
     <base href="/">
 
     <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
 
+    <!--todo - figure out include source for these files that don't exist until harp compile-->
     <link rel="stylesheet" href="sass/header.css">
     <link rel="stylesheet" href="sass/music.css">
     <link rel="stylesheet" href="sass/test.css">
 
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0">
 </head>
 <body>
 <div id="header" ng-class="{docked: $root.location === '/'}">
     <h2 id="brannon" ng-class="{big: $root.location === '/'}">
-        <span class="first">brannon</span> <span class="last">heftel</span>
+        <a href="/">
+            <span class="first">brannon</span> <span class="last">heftel</span>
+        </a>
     </h2>
     <ul>
-        <li ng-class="{selected: $root.location === '/'}">
-            <a href="/">home</a>
-        </li>
         <li ng-class="{selected: $root.location === '/resume'}">
-            <a href="/resume">resume</a>
+            <a href="resume">resume</a>
         </li>
         <li ng-class="{selected: $root.location === '/music'}">
             <a href="music">music</a>
         </li>
-        <li ng-class="{selected: $root.location === '/etc'}">
-            <a href="etc">etc</a>
+        <li ng-class="{selected: $root.location === '/code'}">
+            <a href="code">code</a>
         </li>
     </ul>
-
-
 </div>
 <div ng-view ng-animate-children></div>
 
@@ -42,7 +38,7 @@
 <script src="../bower_components/angular-resource/angular-resource.js"></script>
 <script src="../bower_components/angular-animate/angular-animate.js"></script>
 
-<!-- include:js(./javascript/**/*.js) -->
+<!-- include:js(../javascript/**/*.js) -->
 
 </body>
 </html>

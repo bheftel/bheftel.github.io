@@ -1,4 +1,4 @@
-angular.module('Site', ['ngResource', 'ngRoute', 'ngAnimate', 'CanvasImage'])
+angular.module('Site', ['ngResource', 'ngRoute', 'ngAnimate'])
 .config([
   '$locationProvider',
   '$routeProvider',
@@ -17,14 +17,6 @@ angular.module('Site', ['ngResource', 'ngRoute', 'ngAnimate', 'CanvasImage'])
     .when('/etc', {
       templateUrl: '/javascript/etc/etcTemplate.html',
       controller: 'etcController'
-    })
-    //.when('/etc/:project', {
-    //  templateUrl: '/javascript/etc/projectTemplate.html',
-    //  controller: 'ProjectController'
-    //})
-    .when('/etc/test', {
-      templateUrl: '/javascript/etc/canvasImage/canvasImage.html',
-      controller: 'CanvasImageController'
     })
     .when('/music', {
       templateUrl: '/javascript/music/musicTemplate.html'
