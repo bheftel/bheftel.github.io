@@ -12,12 +12,13 @@ body {
 h2 {
     font-weight: normal;
     /*line-height: 80%;*/
-    max-height: 96vh;
+    max-height: 94vh;
 }
 
 a {
     color: #333;
     text-decoration: none;
+    outline: 0;
 }
 
 @media screen and (max-width: 360px) {
@@ -54,7 +55,7 @@ a {
     }
 
     #header #brannon.big {
-        font-size: 28vw
+        font-size: 27vw;
     }
 
     #header #brannon.big-add .last {
