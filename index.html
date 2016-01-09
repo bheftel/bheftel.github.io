@@ -3,17 +3,18 @@
     <title>site</title>
     <!--<base href="/">-->
 
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
 
-    <!--todo - figure out include source for these files that don't exist until harp compile-->
+    <link rel="stylesheet" href="css/overall.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/music.css">
     <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/resume.css">
 
     <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0">
 </head>
-<body>
-<div id="header" ng-class="{docked: $root.location === '/'}">
+<body scroll>
+<div id="header" ng-class="{docked: $root.location === '/', tiny: scrolledDown}">
     <h2 id="brannon" ng-class="{big: $root.location === '/'}">
         <a href="/#/">
             <span class="first">brannon</span> <span class="last">heftel</span>
@@ -31,6 +32,7 @@
         </li>
     </ul>
 </div>
+<div id="cheat" ng-class="{show: scrolledDown}"></div>
 <div ng-view ng-animate-children></div>
 
 <script src="bower_components/angular/angular.js"></script>

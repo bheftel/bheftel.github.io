@@ -34,7 +34,15 @@ angular.module('Site', ['ngResource', 'ngRoute', 'ngAnimate'])
   function($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function(event, route, previous) {
       $rootScope.location = $location.path();
-
     });
   }
-]);
+])
+.directive('scroll', function ($window, $timeout) {
+  return function(scope, element, attrs) {
+    angular.element($window).bind('scroll', function() {
+      $timeout(function() {
+        scope.scrolledDown = this.pageYOffset >= 100;
+      }, 0);
+    });
+  };
+});
