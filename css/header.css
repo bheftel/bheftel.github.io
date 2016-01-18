@@ -1,6 +1,9 @@
 /* Normal */
 #header {
-    overflow: hidden
+    overflow: hidden;
+    background-color: #f4edb7;
+    z-index: 1;
+    position: relative;
 }
 
 #header #brannon {
@@ -10,7 +13,6 @@
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     /*padding-top: 25px;*/
-    z-index: -1;
 }
 
 #header #brannon.big {
@@ -29,6 +31,8 @@
     list-style: none;
     font-size: 3em;
     padding: 0;
+    position: relative;
+    z-index: 2;
 }
 
 #header ul li {
@@ -40,13 +44,7 @@
     margin: 0 10px;
     border-left: 2px solid transparent;
     border-bottom: 2px solid transparent;
-    z-index: 99999;
 
-}
-
-#header ul li a {
-    /* this doesn't work - why? */
-    z-index: 99999;
 }
 
 #header:not(.docked) ul li.selected, #header:not(.docked) ul li:hover {
@@ -83,7 +81,6 @@
     padding-top: 5px;
     width: 100%;
     overflow: hidden;
-    background-color: #f4edb7;
 }
 
 #header.tiny #brannon {
@@ -108,14 +105,20 @@
 
 /* Mobile */
 
-@media screen and (max-width: 360px) {
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
     #header {
-        font-size: 3em;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
-    #header #brannon.big {
-        font-size: 16vw
+    #header #brannon {
+        font-size: 10vw
     }
 
     #header #brannon.big-add .last {
@@ -125,18 +128,66 @@
     #header #brannon.big-remove .last {
         margin-top: 100px
     }
-}
 
-@media screen and (min-width: 361px) {
+    #header ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-}
+        font-size: 8vw;
+        margin: 0;
 
-@media screen and (min-width: 361px) and (max-width: 360px) {
-    #header ul li {
-        display: block
     }
-}
 
-@media screen and (min-width: 361px) {
+
+    #header.docked ul {
+        flex-direction: column;
+        font-size: 10vw;
+    }
+
+    #header.docked ul {
+        flex-direction: column;
+        font-size: 16vw;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        float: none;
+    }
+
+    #header.docked #brannon {
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        font-size: 26vw;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    #header:not(.docked) ul {
+        flex-direction: row;
+        font-size: 8vw;
+    }
+
+    #header.tiny {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row-reverse;
+    }
+
+    #header.tiny #brannon {
+        float: none;
+        font-size: 8vw;
+    }
+
+    #header.tiny ul {
+        margin: 0;
+        font-size: 5vw;
+        width: inherit;
+        float: none;
+    }
+
+    #cheat.show {
+        margin-bottom: 50px;
+    }
 
 }

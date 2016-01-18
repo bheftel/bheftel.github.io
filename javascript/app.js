@@ -39,9 +39,10 @@ angular.module('Site', ['ngResource', 'ngRoute', 'ngAnimate'])
 ])
 .directive('scroll', function ($window, $timeout) {
   return function(scope, element, attrs) {
+    var height = angular.element(document.getElementById('brannon'))[0].offsetHeight;
     angular.element($window).bind('scroll', function() {
       $timeout(function() {
-        scope.scrolledDown = this.pageYOffset >= 100;
+        scope.scrolledDown = this.pageYOffset >= height;
       }, 0);
     });
   };
