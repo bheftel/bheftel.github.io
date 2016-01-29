@@ -23,3 +23,39 @@ a {
     text-decoration: none;
     outline: 0;
 }
+
+.middleContent {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16pt;
+}
+
+#icons {
+    overflow: hidden;
+}
+
+#icons .icon {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    opacity: .6;
+    transition: opacity .2s;
+}
+
+#icons a.icon:hover {
+    opacity: 1;
+}
+
+#githubIcon {
+    background: url(../images/github.svg);
+}
+
+#linkedinIcon {
+    background: url(../images/linkedin.svg);
+}
+
+.narrowFloatLeft {
+    width: 50px;
+    float: left;
+}

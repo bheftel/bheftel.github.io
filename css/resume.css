@@ -1,8 +1,3 @@
-#resume {
-    width: 80%;
-    margin: 0 auto;
-}
-
 #resume h2 {
     margin-bottom: 5px;
 }
@@ -20,31 +15,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-#resume #icons {
-    overflow: hidden;
-}
-
-#resume #icons a.icon {
-    float: right;
-    width: 30px;
-    height: 30px;
-    margin: 5px;
-    opacity: .6;
-    transition: opacity .2s;
-}
-
-#resume #icons a.icon:hover {
-    opacity: 1;
-}
-
-#resume #githubIcon {
-    background: url(../images/github.svg);
-}
-
-#resume #linkedinIcon {
-    background: url(../images/linkedin.svg);
 }
 
 @media only screen

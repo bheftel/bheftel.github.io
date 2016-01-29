@@ -21,6 +21,9 @@ angular.module('Site', ['ngResource', 'ngRoute', 'ngAnimate'])
     .when('/music', {
       templateUrl: './javascript/music/musicTemplate.html'
     })
+    .when('/code', {
+      templateUrl: './javascript/codePortfolio/codePortfolioTemplate.html'
+    })
     .otherwise({
       template: '<div>nothing to report</div>'
     });
