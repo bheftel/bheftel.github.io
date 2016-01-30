@@ -11,10 +11,18 @@
     z-index: 0;
 }
 
+#resume #icons {
+    margin-top: .7em;
+}
+
 #resume #contact {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#resume #resume_pdf {
+    margin-top: 1em;
 }
 
 @media only screen
@@ -29,6 +37,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
     #resume #contact #icons {
         text-align: center;
+        margin-top: 0;
     }
 
     #resume #contact #icons a {
