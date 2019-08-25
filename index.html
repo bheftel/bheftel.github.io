@@ -1,48 +1,14 @@
-<html ng-app="Site">
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>brannon heftel</title>
+  </head>
 
-    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
-
-    <link rel="stylesheet" href="css/overall.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/music.css">
-    <link rel="stylesheet" href="css/test.css">
-    <link rel="stylesheet" href="css/resume.css">
-
-    <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0">
-</head>
-<body scroll>
-<div id="header" ng-class="{docked: $root.location === '/', tiny: scrolledDown}">
-    <h2 id="brannon" ng-class="{big: $root.location === '/'}">
-        <a href="/#/">
-            <span class="first">brannon</span> <span class="last">heftel</span>
-        </a>
-    </h2>
-    <ul>
-        <li ng-class="{selected: $root.location === '/resume'}">
-            <a href="#/resume">resume</a>
-        </li>
-        <li ng-class="{selected: $root.location === '/music'}">
-            <a href="#/music">music</a>
-        </li>
-        <li ng-class="{selected: $root.location === '/code'}">
-            <a href="#/code">code</a>
-        </li>
-    </ul>
-</div>
-<div id="cheat" ng-class="{show: scrolledDown}"></div>
-<div ng-view ng-animate-children></div>
-
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
-
-
-<script src="javascript/app.js"></script>
-<script src="javascript/home/home.js"></script>
-<script src="javascript/resume/resume.js"></script>
-
-</body>
+  <body>
+    <h5>there's nothing here</h5>
+  </body>
 </html>
