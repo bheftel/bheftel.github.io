@@ -41,13 +41,17 @@ export const SubTitle = () => {
 };
 
 const SubTitleContainer = styled.h2`
-  font-size: 3rem;
+  font-size: 2.5rem;
+  line-height: 1;
+  @media (min-width: 1000px) {
+    font-size: 3rem;
+    line-height: 0.8;
+  }
   padding: 0;
   margin: 10px;
   position: relative;
 
   /* font-size: 11px; */
-  line-height: 0.8;
   letter-spacing: -2px;
   /* font-weight: 300; */
 

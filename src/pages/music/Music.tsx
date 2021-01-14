@@ -15,7 +15,6 @@ export const Music: FC<{}> = () => {
         <h3>spotify</h3>
         <iframe
           src="https://open.spotify.com/embed/artist/40LEZjzdNjvKwRg3gLioBZ"
-          width="500"
           height="280"
           frameBorder="0"
           allowTransparency={true}
@@ -25,7 +24,6 @@ export const Music: FC<{}> = () => {
       <ExternalContainer>
         <h3>soundcloud</h3>
         <iframe
-          width="500"
           height="280"
           scrolling="no"
           frameBorder="no"
@@ -47,5 +45,9 @@ const ExternalContainer = styled.div`
   margin-top: 40px;
   iframe {
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.85);
+
+    @media (min-width: 1000px) {
+      width: 80%;
+    }
   }
 `;

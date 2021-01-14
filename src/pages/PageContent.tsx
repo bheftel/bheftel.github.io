@@ -29,9 +29,14 @@ export const PageContent: React.FC<{}> = (props) => {
 
 const ContentContainer = styled.div`
   font-size: 24px;
-  padding: 50px;
-  max-width: 85%;
   margin: 0 auto;
+
+  max-width: 100%;
+
+  @media (min-width: 1000px) {
+    padding: 50px;
+    max-width: 85%;
+  }
 
   h1 {
     margin-top: 0;

@@ -130,10 +130,15 @@ const LinkContainer = styled.div<{ isHome: boolean }>`
 `;
 
 const TitleContainer = styled.h1<{ isHome: boolean }>`
-  font-size: 10rem;
+  font-size: 4rem;
+  min-height: 100px;
+
+  @media (min-width: 1000px) {
+    font-size: 10rem;
+    min-height: 187.5px;
+  }
   padding: 0;
   margin: 0;
-  min-height: 187.5px;
   /* min-height: 100%; */
   /* margin-left: -1px; */
   position: relative;
