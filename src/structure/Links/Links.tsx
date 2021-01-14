@@ -15,9 +15,13 @@ const linkItemContent = [
     label: "music",
     path: "/music",
   },
+  // {
+  //   label: "projects",
+  //   path: "/projects",
+  // },
   {
-    label: "projects",
-    path: "/projects",
+    label: "contact",
+    path: "/contact",
   },
 ];
 
