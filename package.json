@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack",
-    "test": "node scripts/test.js"
+    "build": "webpack"
   },
   "eslintConfig": {
     "extends": "react-app"

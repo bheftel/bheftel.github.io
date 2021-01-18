@@ -1,4 +1,4 @@
-// TODO - this jest config
+// TODO - this jest config and actually add tests
 
 const old = {
   jest: {

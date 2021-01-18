@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-// import logo from './logo.svg';
-// import "./App.css";
-
-import styled from "styled-components";
-
 import { CSSTransition } from "react-transition-group";
+import styled from "styled-components";
 
 import { routes } from "./routes";
 
@@ -31,18 +27,6 @@ const App = () => {
 
   return (
     <ContentConatiner className="App">
-      {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      {/* <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       <Background id="background" color={bgColor} />
       <Router>
         <Title />
@@ -73,12 +57,6 @@ const App = () => {
               </Route>
             );
           })}
-          {/* <Route path="/resume">
-            <div>resume</div>
-          </Route>
-          <Route path="/">
-            <Links />
-          </Route> */}
         </Switch>
       </Router>
     </ContentConatiner>

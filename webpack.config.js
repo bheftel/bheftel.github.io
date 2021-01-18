@@ -12,12 +12,10 @@ const babelLoader = {
       "@babel/preset-typescript",
       "@babel/preset-env",
       "@babel/react",
-      //
     ],
     plugins: [
       "@babel/plugin-transform-typescript",
       "react-hot-loader/babel",
-      //
     ],
   },
 };

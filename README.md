@@ -6,4 +6,6 @@ Written in typescript, the build code will be checked in so github pages can hos
 
 `yarn start`
 
+precommit hook runs `yarn build` and adds the build code to the commit
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
