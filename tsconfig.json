@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["es2017", "dom"],
+    "outDir": "dist",
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "isolatedModules": true
+  },
+  "include": ["src"]
+}
