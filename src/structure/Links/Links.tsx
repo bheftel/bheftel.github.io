@@ -41,9 +41,13 @@ export const Links = () => {
 
 export const List = styled.ul`
   list-style: none;
-  padding-left: 10px;
+  padding-left: 0;
   margin-top: 40px;
 
   line-height: normal;
   height: 80%;
+
+  @media (min-width: 1000px) {
+    padding-left: 10px;
+  }
 `;

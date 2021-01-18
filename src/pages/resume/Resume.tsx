@@ -3,6 +3,8 @@ import React from "react";
 import { PageContent } from "../PageContent";
 
 export const Resume = () => {
+  // todo - add resume content, general clean up
+
   return (
     <PageContent>
       <h1>resume</h1>

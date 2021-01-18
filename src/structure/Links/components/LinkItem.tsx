@@ -35,6 +35,7 @@ export const LinkItem: React.FC<Props> = (props) => {
 
 const Item = styled.li<{ delay: number }>`
   font-size: 2.5rem;
+
   @media (min-width: 1000px) {
     font-size: 3rem;
   }
