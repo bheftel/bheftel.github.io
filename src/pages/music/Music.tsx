@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 
+import { IframeLoader } from "./IframeLoader";
 import { PageContent } from "../PageContent";
 
 export const Music: FC<{}> = () => {
@@ -13,23 +14,11 @@ export const Music: FC<{}> = () => {
       </p>
       <ExternalContainer>
         <h3>spotify</h3>
-        <iframe
-          src="https://open.spotify.com/embed/artist/40LEZjzdNjvKwRg3gLioBZ"
-          height="280"
-          frameBorder="0"
-          allowTransparency={true}
-          allow="encrypted-media"
-        ></iframe>
+        <IframeLoader src="https://open.spotify.com/embed/artist/40LEZjzdNjvKwRg3gLioBZ"></IframeLoader>
       </ExternalContainer>
       <ExternalContainer>
         <h3>soundcloud</h3>
-        <iframe
-          height="280"
-          scrolling="no"
-          frameBorder="no"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/615506784&color=%236c6c5c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
-        ></iframe>
+        <IframeLoader src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/615506784&color=%236c6c5c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></IframeLoader>
       </ExternalContainer>{" "}
       <ExternalContainer>
         <h3>instagram</h3>
@@ -43,11 +32,4 @@ export const Music: FC<{}> = () => {
 
 const ExternalContainer = styled.div`
   margin-top: 40px;
-  iframe {
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.85);
-
-    @media (min-width: 1000px) {
-      width: 80%;
-    }
-  }
 `;
