@@ -48,6 +48,10 @@ const SubTitleContainer = styled.h2`
   margin-left: 0;
   position: relative;
 
+  a {
+    text-decoration: none;
+  }
+
   @media (min-width: 1000px) {
     font-size: 3rem;
     line-height: 0.8;

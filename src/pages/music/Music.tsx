@@ -22,7 +22,11 @@ export const Music: FC<{}> = () => {
       </ExternalContainer>{" "}
       <ExternalContainer>
         <h3>instagram</h3>
-        <a href="https://www.instagram.com/brannonheftelmusic/" target="_blank">
+        <a
+          href="https://www.instagram.com/brannonheftelmusic/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           brannonheftelmusic
         </a>
       </ExternalContainer>

@@ -50,11 +50,8 @@ const Item = styled.li<{ delay: number }>`
   }
   &.${transitionName}-enter-active, &.${transitionName}-enter-done {
     transform: translateX(0);
-    /* transition-property: transform, opacity; */
 
-    /* transition-duration: ${appearDuration} */
     transition: transform ${appearDuration}ms cubic-bezier(0.1, 0.55, 0.07, 1),
       opacity 220ms ease-in, color 220ms ease-in;
-    /* transition: opacity 200ms ease-in; */
   }
 `;

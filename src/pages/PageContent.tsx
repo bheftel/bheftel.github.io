@@ -48,6 +48,5 @@ const ContentContainer = styled.div`
   &.${transitionName}-enter-active, &.${transitionName}-enter-done {
     margin-left: 0px;
     transition: margin-left ${appearDuration}ms cubic-bezier(0.1, 0.55, 0.07, 1);
-    /* transition: opacity 200ms ease-in; */
   }
 `;

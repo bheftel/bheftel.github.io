@@ -40,6 +40,10 @@ export const Links = () => {
 };
 
 export const List = styled.ul`
+  a {
+    text-decoration: none;
+  }
+
   list-style: none;
   padding-left: 0;
   margin-top: 40px;

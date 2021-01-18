@@ -130,6 +130,10 @@ const LinkContainer = styled.div<{ isHome: boolean }>`
 `;
 
 const TitleContainer = styled.h1<{ isHome: boolean }>`
+  a {
+    text-decoration: none;
+  }
+
   font-size: 4rem;
   min-height: 100px;
 
