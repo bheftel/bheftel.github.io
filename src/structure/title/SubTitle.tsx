@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { CSSTransition } from "react-transition-group";
 
-import { useRouteMatch } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const transitionName = "test";
 const appearDuration = 1200;
@@ -11,13 +11,11 @@ const appearDuration = 1200;
 export const SubTitle = () => {
   const [subTitleIn, setSubTitleIn] = useState<boolean>(false);
 
-  const isHomeScreen = useRouteMatch({
-    path: "/",
-    strict: true,
-  });
+  const location = useLocation();
+  const isHomeScreen = location.pathname === "/";
 
   useEffect(() => {
-    if (!!isHomeScreen?.isExact) {
+    if (!!isHomeScreen) {
       setTimeout(() => {
         setSubTitleIn(true);
       }, appearDuration / 3);

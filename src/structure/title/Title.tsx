@@ -11,30 +11,25 @@ import { Links, List } from "../Links/Links";
 
 import { NavMenu } from "../NavMenu/NavMenu";
 
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link, useLocation, useMatch } from "react-router-dom";
 
 const titleIn = TransitionNames.titleIn;
 const titleSwitch = TransitionNames.titleIn + "_switch"; // todo - const for this
 
 export const Title = () => {
   // console.error(TransitionNames);
-  const [titleShow, setTitleIn] = useState<boolean>(false);
+  const [titleShow, setTitleShow] = useState<boolean>(false);
 
-  const isHome =
-    useRouteMatch({
-      path: "/",
-      exact: true,
-    })?.isExact || false;
+  const location = useLocation();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTitleIn(true);
-    }, 0);
-  }, []);
+  const isHome = location.pathname === "/";
+
+  if (!titleShow) {
+    setTitleShow(true);
+  }
 
   return (
     <TitleBarContainer>
-      {/* <NavMenu show={!isHome} /> */}
       <div>
         <CSSTransition
           classNames={titleIn}

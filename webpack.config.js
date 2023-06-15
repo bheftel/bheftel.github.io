@@ -2,21 +2,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
-const mode = process.env.NODE_ENV || "development"; 
+const mode = process.env.NODE_ENV || "development";
 
 const babelLoader = {
   loader: "babel-loader",
   options: {
     cacheDirectory: true,
-    presets: [
-      "@babel/preset-typescript",
-      "@babel/preset-env",
-      "@babel/react",
-    ],
-    plugins: [
-      "@babel/plugin-transform-typescript",
-      "react-hot-loader/babel",
-    ],
+    presets: ["@babel/preset-typescript", "@babel/preset-env", "@babel/react"],
+    plugins: ["@babel/plugin-transform-typescript", "react-hot-loader/babel"],
   },
 };
 
@@ -59,11 +52,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, "src"),
+    // entry: path.join(__dirname, "src"),
     // compress: true,
     port: 9000,
     host: "0.0.0.0",
-    disableHostCheck: true,
     hot: true,
     https: true,
     historyApiFallback: true,
