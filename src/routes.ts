@@ -1,11 +1,13 @@
+import pageColors from "./pageColors.json"
+
 import { Links } from "./structure/Links/Links";
 
 import { Contact, Music, Projects, Resume } from "./pages";
 
 export const routes = [
-  { path: "/resume", Component: Resume, color: "#d1dfe0" },
-  { path: "/music", Component: Music, color: "#e4d356" },
-  { path: "/projects", Component: Projects, color: "#c1d5bd" },
-  { path: "/contact", Component: Contact, color: "#b5ffa6" },
-  { path: "/", Component: Links, color: "#d5c4bd" },
+  { path: "/resume", Component: Resume, color: pageColors["#/resume"] },
+  { path: "/music", Component: Music, color: pageColors["#/music"] },
+  { path: "/projects", Component: Projects, color: pageColors["#/projects"] },
+  { path: "/contact", Component: Contact, color: pageColors["#/contact"] },
+  { path: "/", Component: Links, color: pageColors["#/"] },
 ];

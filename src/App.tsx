@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
+import pageColors from "./pageColors.json"
+
 import { routes } from "./routes";
 
 import {
@@ -21,7 +23,9 @@ import {
 } from "react-router-dom";
 
 const App = () => {
-  const [bgColor, setBgColor] = useState<string>("#d5c4bd");
+const hash = window.location.hash;
+
+  const [bgColor, setBgColor] = useState<string>((pageColors as any)[hash] ?? "#d5c4bd");
 
   const handleChangeColor = (color: string) => {
     setBgColor(color);
@@ -60,7 +64,6 @@ const RouteElement = ({ handleChangeColor, route }: RouteElProps) => {
   return (
     <>
       <CSSTransition
-        // in={match !== null}
         timeout={200}
         classNames="background"
         unmountOnExit={true}
