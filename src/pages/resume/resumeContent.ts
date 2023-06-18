@@ -9,7 +9,18 @@ const resumeContent: ResumeContent = {
       subsections: [
         {
           title: "NGINX / F5 Networks",
-          date: "May 2019 - Present - Software Engineer III",
+          date: "March 2021 - Present - Senior Software Engineer",
+          description: "Front-end development for SaaS products",
+          bullets: [
+            "Maintenance of legacy JS React and express app",
+            "New feature development for F5 Distributed Cloud using Angular",
+            "Led TypeScript rewrite of legacy React app",
+            "Security reviews and threat model assessments of UI and web services",
+            "Contributions to shared design system",
+          ],
+        },{
+          title: "NGINX / F5 Networks",
+          date: "May 2019 - March 2021 - Software Engineer III",
           description: "Front-end development for NGINX Controller",
           bullets: [
             "Migration of JS React/Redux app to TypeScript with React and Styled-Components",
@@ -72,16 +83,17 @@ const resumeContent: ResumeContent = {
       title: "Technologies",
       description: "JavaScript, TypeScript",
       bullets: [
+        "Primarily using TypeScript since 2018",
         "React, AngularJS",
         "styled-components, LESS/SCSS",
-        "node.js and express",
-        "lots of build and testing tools - jest, enzyme, mocha/chai, react-testing-library, cypress, testcafe, gulp, webpack, rollup",
+        "node.js and express, some Next.js",
+        "lots of build and testing tools - jest, enzyme, mocha/chai, react-testing-library, cypress, testcafe, gulp, webpack, rollup, nx",
       ],
     },
     {
       description: "Tooling and Devops",
       bullets: [
-        "Gitlab CI, bash scripts, nginx configs",
+        "Gitlab CI, GitHub Actions, bash scripts, nginx configs",
         "Docker, k8s",
         "Familiarity with Terraform, AWS deployments, general networking",
       ],
