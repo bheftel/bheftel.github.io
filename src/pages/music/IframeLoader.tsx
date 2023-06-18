@@ -3,20 +3,20 @@ import styled, { keyframes } from "styled-components";
 
 interface Props {
   src: string;
+  height: number;
 }
 
 export const IframeLoader = (props: Props) => {
   const [loaded, setLoaded] = useState<boolean>(false);
   return (
-    <Container loaded={loaded}>
+    <Container $loaded={loaded}>
       {!loaded && <Spinner />}
-      <IframeContainer loaded={loaded}>
+      <IframeContainer $loaded={loaded} $height={props.height}>
         <iframe
           onLoad={() => setLoaded(true)}
           src={props.src}
-          height="280"
+          height={props.height}
           frameBorder="0"
-          allowTransparency={true}
           allow="encrypted-media"
         ></iframe>
       </IframeContainer>
@@ -24,17 +24,18 @@ export const IframeLoader = (props: Props) => {
   );
 };
 
-const Container = styled.div<{ loaded: boolean }>`
+const Container = styled.div<{ $loaded: boolean }>`
   position: relative;
 `;
-const IframeContainer = styled.div<{ loaded: boolean }>`
-  height: 280px;
+const IframeContainer = styled.div<{ $loaded: boolean; $height: number }>`
+  height: ${p => p.$height}px;
   &:before {
     content: "";
     position: absolute;
     height: 100%;
+    border-radius: 12px;
     box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.85);
-    opacity: ${(props) => (props.loaded ? "1" : "0")};
+    opacity: ${(props) => (props.$loaded ? "1" : "0")};
     transition: opacity 0.3s ease-in-out;
 
     width: 100%;
@@ -44,7 +45,9 @@ const IframeContainer = styled.div<{ loaded: boolean }>`
   }
   iframe {
     display: block;
-    height: 280px;
+    border-radius: 12px;
+
+    height: ${p => p.$height}px;
     width: 100%;
     @media (min-width: 1000px) {
       width: 80%;

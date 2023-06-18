@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, ReactNode } from "react";
 import styled from "styled-components";
 
 import { IframeLoader } from "./IframeLoader";
 import { PageContent } from "../PageContent";
 
-export const Music: FC<{}> = () => {
+export const Music: FC<{children: ReactNode}> = () => {
   return (
     <PageContent>
       <h1>music</h1>
@@ -14,12 +14,12 @@ export const Music: FC<{}> = () => {
       </p>
       <ExternalContainer>
         <h3>spotify</h3>
-        <IframeLoader src="https://open.spotify.com/embed/artist/40LEZjzdNjvKwRg3gLioBZ"></IframeLoader>
+        <IframeLoader src="https://open.spotify.com/embed/album/7B8xL2tNscsKIS3zOg90zc?utm_source=generator&theme=0" height={380}></IframeLoader>
       </ExternalContainer>
       <ExternalContainer>
-        <h3>soundcloud</h3>
-        <IframeLoader src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/615506784&color=%236c6c5c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></IframeLoader>
-      </ExternalContainer>{" "}
+        <h3>bandcamp</h3>
+        <IframeLoader src="https://bandcamp.com/EmbeddedPlayer/track=1516874966/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/transparent=true/" height={120}/>
+      </ExternalContainer>
       <ExternalContainer>
         <h3>instagram</h3>
         <a
@@ -27,7 +27,7 @@ export const Music: FC<{}> = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          brannonheftelmusic
+          @brannonheftelmusic
         </a>
       </ExternalContainer>
     </PageContent>

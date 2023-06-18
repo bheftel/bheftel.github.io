@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import styled from "styled-components";
 
 import { CSSTransition } from "react-transition-group";
@@ -6,7 +6,7 @@ import { CSSTransition } from "react-transition-group";
 const transitionName = "pageContent";
 const appearDuration = 400;
 
-export const PageContent: React.FC<{}> = (props) => {
+export const PageContent: React.FC<{children: ReactNode}> = (props) => {
   const [contentIn, setContentIn] = useState<boolean>(false);
 
   useEffect(() => {
