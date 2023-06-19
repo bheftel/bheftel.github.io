@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>brannon heftel</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <body>
-    <div id="root"></div>
-  <script src="main.js"></script></body>
+  <title>brannon heftel</title>
+
+<script defer src="main.js"></script></head>
+
+<body>
+  <div id="root"></div>
+  <script>
+
+    const pageColors = {
+      "#/resume": "#d1dfe0",
+      "#/music": "#e4d356",
+      "#/projects": "#c1d5bd",
+      "#/contact": "#b5ffa6",
+      "#/": "#d5c4bd"
+    }
+
+    const page = window.location.hash;
+    const c = document.getElementsByTagName("body")[0].style.backgroundColor = pageColors[page] ?? "";
+    console.log(page);
+    debugger;
+  </script>
+</body>
+
 </html>

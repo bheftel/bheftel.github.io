@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
+import pageColors from "./pageColors.json"
+
 import { routes } from "./routes";
 
-import { Background, BackgroundAnimation } from "./structure/Background";
+import {
+ Background,
+ BackgroundAnimation,
+} from "./structure/Background";
 
 import { Title } from "./structure/title/Title";
 import { SubTitle } from "./structure/title/SubTitle";
@@ -14,12 +19,13 @@ import {
   // use hashrouter so github pages is ok
   HashRouter as Router,
   Route,
-  Switch,
-  useRouteMatch,
+  Routes,
 } from "react-router-dom";
 
 const App = () => {
-  const [bgColor, setBgColor] = useState<string>("#d5c4bd");
+const hash = window.location.hash;
+
+  const [bgColor, setBgColor] = useState<string>((pageColors as any)[hash] ?? "#d5c4bd");
 
   const handleChangeColor = (color: string) => {
     setBgColor(color);
@@ -31,35 +37,42 @@ const App = () => {
       <Router>
         <Title />
         <SubTitle />
-        <Switch>
+        <Routes>
           {routes.map((route) => {
             return (
-              <Route key={route.path} exact={true} path={route.path}>
-                {({ match }) => {
-                  setTimeout(() => {
-                    handleChangeColor(route.color);
-                  }, 200);
-                  return (
-                    <>
-                      <CSSTransition
-                        in={match !== null}
-                        timeout={200}
-                        classNames="background"
-                        unmountOnExit={true}
-                        mountOnEnter={true}
-                      >
-                        <BackgroundAnimation color={route.color} />
-                      </CSSTransition>
-                      <route.Component />
-                    </>
-                  );
-                }}
-              </Route>
+              <Route
+                key={route.path}
+                path={route.path}
+                element={<RouteElement handleChangeColor={handleChangeColor} route={route} />}
+              ></Route>
             );
           })}
-        </Switch>
+        </Routes>
       </Router>
     </ContentConatiner>
+  );
+};
+
+interface RouteElProps {
+  handleChangeColor: any;
+  route: any;
+}
+const RouteElement = ({ handleChangeColor, route }: RouteElProps) => {
+  setTimeout(() => {
+    handleChangeColor(route.color);
+  }, 200);
+  return (
+    <>
+      <CSSTransition
+        timeout={200}
+        classNames="background"
+        unmountOnExit={true}
+        mountOnEnter={true}
+      >
+        <BackgroundAnimation color={route.color} />
+      </CSSTransition>
+      <route.Component />
+    </>
   );
 };
 

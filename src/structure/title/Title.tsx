@@ -11,30 +11,25 @@ import { Links, List } from "../Links/Links";
 
 import { NavMenu } from "../NavMenu/NavMenu";
 
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link, useLocation, useMatch } from "react-router-dom";
 
 const titleIn = TransitionNames.titleIn;
 const titleSwitch = TransitionNames.titleIn + "_switch"; // todo - const for this
 
 export const Title = () => {
   // console.error(TransitionNames);
-  const [titleShow, setTitleIn] = useState<boolean>(false);
+  const [titleShow, setTitleShow] = useState<boolean>(false);
 
-  const isHome =
-    useRouteMatch({
-      path: "/",
-      exact: true,
-    })?.isExact || false;
+  const location = useLocation();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTitleIn(true);
-    }, 0);
-  }, []);
+  const isHome = location.pathname === "/";
+
+  if (!titleShow) {
+    setTitleShow(true);
+  }
 
   return (
     <TitleBarContainer>
-      {/* <NavMenu show={!isHome} /> */}
       <div>
         <CSSTransition
           classNames={titleIn}
@@ -42,7 +37,7 @@ export const Title = () => {
           in={titleShow}
           unmountOnExit={true}
         >
-          <TitleContainer isHome={!!isHome}>
+          <TitleContainer $isHome={!!isHome}>
             <CSSTransition
               classNames={titleSwitch}
               timeout={switchDuration}
@@ -54,7 +49,7 @@ export const Title = () => {
             {
               // todo - maybe need another transition so it stays for a moment
               !isHome && (
-                <LinkContainer isHome={!!isHome}>
+                <LinkContainer $isHome={!!isHome}>
                   <Link to="/">bh</Link>
                 </LinkContainer>
               )
@@ -118,8 +113,8 @@ const HomeTitle = styled.div`
 
 // todo - clicking, not hovering for this
 
-const LinkContainer = styled.div<{ isHome: boolean }>`
-  /* position: ${({ isHome }) => (isHome ? "absolute" : "relative")}; */
+const LinkContainer = styled.div<{ $isHome?: boolean }>`
+  /* position: ${({ $isHome }) => ($isHome ? "absolute" : "relative")}; */
   position: absolute;
   top: 0;
   /* height: 130px; */
@@ -129,7 +124,7 @@ const LinkContainer = styled.div<{ isHome: boolean }>`
   }
 `;
 
-const TitleContainer = styled.h1<{ isHome: boolean }>`
+const TitleContainer = styled.h1<{ $isHome: boolean }>`
   a {
     text-decoration: none;
   }
@@ -174,8 +169,8 @@ const TitleContainer = styled.h1<{ isHome: boolean }>`
     top: 0;
   }
 
-  ${({ isHome }) => {
-    if (!isHome) {
+  ${({ $isHome }) => {
+    if (!$isHome) {
       return css`
         /* transition: transform 500ms, height 400ms ease 100ms;
               transform: scale(.2);
