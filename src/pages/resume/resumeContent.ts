@@ -12,18 +12,19 @@ const resumeContent: ResumeContent = {
           date: "March 2021 - Present - Senior Software Engineer",
           description: "Front-end development for SaaS products",
           bullets: [
-            "Maintenance of legacy JS React and express app",
+            "Led TypeScript rewrite of a legacy React app",
             "New feature development for F5 Distributed Cloud using Angular",
-            "Led TypeScript rewrite of legacy React app",
+            "Maintenance of legacy JS React and Express app",
             "Security reviews and threat model assessments of UI and web services",
-            "Contributions to shared design system",
+            "Contributions to shared component libraries",
+            "Coordination with internal and external partner teams"
           ],
         },{
           title: "NGINX / F5 Networks",
           date: "May 2019 - March 2021 - Software Engineer III",
           description: "Front-end development for NGINX Controller",
           bullets: [
-            "Migration of JS React/Redux app to TypeScript with React and Styled-Components",
+            "Worked on migration of JS React/Redux app to TypeScript with React and Styled-Components",
             "Component development for design system",
             "Helped lead efforts for sharing common code across projects and writing internal libraries and frameworks",
             "Set up monorepos and build pipelines for multiple projects with Lerna, Yarn workspaces, webpack, and Gitlab CI",
