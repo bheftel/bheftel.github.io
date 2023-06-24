@@ -19,7 +19,7 @@ module.exports = {
   entry: "./src/index.tsx",
   devtool: "inline-source-map",
   output: {
-    filename: "main.js",
+    filename: "[contenthash].main.js",
     path: path.resolve(__dirname, "docs"),
   },
   module: {
