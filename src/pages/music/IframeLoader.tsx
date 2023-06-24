@@ -14,6 +14,7 @@ export const IframeLoader = (props: Props) => {
       <IframeContainer $loaded={loaded} $height={props.height}>
         <iframe
           onLoad={() => setLoaded(true)}
+          onError={() => setLoaded(true)}
           src={props.src}
           height={props.height}
           frameBorder="0"
@@ -46,6 +47,7 @@ const IframeContainer = styled.div<{ $loaded: boolean; $height: number }>`
   iframe {
     display: block;
     border-radius: 12px;
+    position: relative;
 
     height: ${p => p.$height}px;
     width: 100%;
