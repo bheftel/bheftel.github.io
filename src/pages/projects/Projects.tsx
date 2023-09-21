@@ -7,12 +7,11 @@ export const Projects = () => {
     <PageContent>
       <h1>projects</h1>
       <p>
-        Most of my unclaimed time goes to my two young kids, there isn't time
-        for other projects. Someday this side project section will have actual
-        completed code in it, but for now it is empty. But if anyone acutally
-        sees this, it's here because only having two sections was weird visually
-        🤷‍♂️
+        Most of my unclaimed time goes to my two kids, there isn't much time
+        for other projects. Someday this side project section will have more
+        completed code in it, but for now it is just this.
       </p>
+      <a href="http://www.brannonheftel.com/browser-synth/">browser synth experiment</a>
     </PageContent>
   );
 };
