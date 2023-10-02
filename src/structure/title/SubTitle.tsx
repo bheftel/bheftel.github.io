@@ -32,7 +32,7 @@ export const SubTitle = () => {
       unmountOnExit={true}
     >
       <SubTitleContainer>
-        front-end leaning full-stack developer
+        front-end developer with full-stack experience
       </SubTitleContainer>
     </CSSTransition>
   );

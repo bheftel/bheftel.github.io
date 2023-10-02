@@ -2,7 +2,7 @@ import { ResumeContent } from "./types";
 
 const resumeContent: ResumeContent = {
   title: "brannon heftel",
-  subtitle: "front-end focused full-stack developer",
+  subtitle: "front-end developer with full-stack experience",
   mainSections: [
     {
       title: "Work Experience",
@@ -19,7 +19,7 @@ const resumeContent: ResumeContent = {
             "Contributions to shared component libraries",
             "Coordination with internal and external partner teams"
           ],
-        },{
+        }, {
           title: "NGINX / F5 Networks",
           date: "May 2019 - March 2021 - Software Engineer III",
           description: "Front-end development for NGINX Controller",
